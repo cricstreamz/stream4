@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live TV | Sports</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="https://tvs6.github.io/sports_2.0/index.html">
+            <p>Wait 30 Seconds To Load Chanels</p>
+        </a>
+    </div>
 
+    <div class="container">
+        <!-- Iframe Container -->
+        <div class="iframe-container">
+            <iframe id="match-iframe" src="https://cricsters.fun/p2/?id=FanCode" scrolling="no" allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        </div>
+
+        <!-- Iframe Source Links -->
+        <div id="iframe-links">
+            <button class="iframe-btn" onclick="changeIframeSource('https://cricsters.fun/p2/?id=FanCode')">FANCODE</button>
+            <button class="iframe-btn" onclick="changeIframeSource('https://tapmadtv.live/play.php?c=ptvpk')">PTV SPORTS</button>
+            <button class="iframe-btn" onclick="changeIframeSource('https://play.footfy.live/api/AGV/play.php?play=65')">SKY SPORTS</button>
+            <button class="iframe-btn" onclick="changeIframeSource('https://me.webcric.com/frame2.htm')">SERVER 4</button>
+            
+            <button class="iframe-btn" onclick="changeIframeSource('http://125.209.88.166:45793/BRN/ArySports.stream/playlist.m3u8')">SERVER 5</button>
+        </div>
+    </div>
+
+    <!-- Add Telegram and Download Buttons at the very bottom -->
+    <div class="bottom-container">
+        <a href="https://t.me/Anasm3u8link" class="telegram-btn">Join Telegram</a>
+        <a href="http://www.appcreator24.com/app3326815-2nwqum" class="download-btn">Download the App</a>
+    </div>
+
+    <script>
+        // Function to change the iframe source
+        function changeIframeSource(url) {
+            document.getElementById('match-iframe').src = url;
+        }
+
+        // Current time display
+        function updateCurrentTime() {
+            const now = new Date();
+            const currentTime = now.toLocaleTimeString();
+            document.getElementById('current-time').textContent = `Current Time: ${currentTime}`;
+        }
+        setInterval(updateCurrentTime, 1000);
+    </script>
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+</body>
+</html>
